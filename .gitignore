@@ -35,3 +35,58 @@ out/
 
 ### VS Code ###
 .vscode/
+
+### 환경설정 & 보안 ###
+# 시크릿 설정 파일
+/src/main/resources/application-secret.yml
+.env
+.env.local
+.env.production
+
+### 로그 파일 ###
+logs/
+*.log
+log/
+
+### 업로드된 파일 ###
+/uploads/
+/files/
+/images/
+/static/uploads/
+
+### 데이터베이스 ###
+*.db
+*.sqlite
+*.sqlite3
+/data/
+
+### 임시 파일 ###
+*.tmp
+*.temp
+*.swp
+*.swo
+*~
+
+### 맥OS ###
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+
+### 윈도우 ###
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+### 테스트 관련 ###
+/test-results/
+/coverage/
+
+### 도커 ###
+docker-compose.override.yml
+
+### JWT 키 파일 ###
+*.key
+*.pem
+/keys/
