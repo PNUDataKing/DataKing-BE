@@ -10,14 +10,13 @@ import com.pnudataking.backend.toilet.entity.Toilet;
 
 public interface ToiletRepository extends JpaRepository<Toilet, Long> {
 
-    @Query("""
-SELECT t FROM Toilet t
-WHERE t.lat BETWEEN :lat1 AND :lat2
-  AND t.lng BETWEEN :lng1 AND :lng2
-""")
-    List<Toilet> findAllByRange(
-            @Param("lat1") double lat1,
-            @Param("lng1") double lng1,
-            @Param("lat2") double lat2,
-            @Param("lng2") double lng2);
+    @Query("SELECT n FROM Toilet n WHERE " +
+            "n.lat BETWEEN :swLat AND :neLat AND " +
+            "n.lng BETWEEN :swLng AND :neLng")
+    List<Toilet> findByBounds(
+            @Param("swLat") Double swLat,  // 남서쪽 위도
+            @Param("swLng") Double swLng,  // 남서쪽 경도
+            @Param("neLat") Double neLat,  // 북동쪽 위도
+            @Param("neLng") Double neLng   // 북동쪽 경도
+    );
 }

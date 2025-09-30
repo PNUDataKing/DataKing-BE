@@ -9,10 +9,12 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 import lombok.AllArgsConstructor;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 @Entity
 @Table(name = "toilet")
+@Getter
 @AllArgsConstructor
 @NoArgsConstructor
 public class Toilet {
