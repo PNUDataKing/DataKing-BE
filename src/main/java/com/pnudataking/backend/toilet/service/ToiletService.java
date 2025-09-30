@@ -32,7 +32,11 @@ public class ToiletService {
             Double neLat, Double neLng) {
         List<Toilet> toilets = toiletRepository.findByBounds(swLat, swLng, neLat, neLng);
 
+
         return toilets.stream()
+                .filter(toilet -> {
+                    return toilet.getDiaperLocationFemale() || toilet.getDiaperLocationAccessible() || toilet.getDiaperLocationMale();
+                })
                 .map(ToiletDetailDto::from)
                 .toList();
     }
