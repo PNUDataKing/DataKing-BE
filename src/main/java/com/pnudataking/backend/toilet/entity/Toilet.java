@@ -1,4 +1,4 @@
-package com.pnudataking.backend.entity;
+package com.pnudataking.backend.toilet.entity;
 
 import java.time.LocalDate;
 

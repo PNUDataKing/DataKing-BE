@@ -1,4 +1,4 @@
-package com.pnudataking.backend.repository;
+package com.pnudataking.backend.toilet.repository;
 
 import java.util.List;
 
@@ -6,7 +6,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 
-import com.pnudataking.backend.entity.Toilet;
+import com.pnudataking.backend.toilet.entity.Toilet;
 
 public interface ToiletRepository extends JpaRepository<Toilet, Long> {
 
