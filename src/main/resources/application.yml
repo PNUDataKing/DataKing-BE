@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: pnu-dataaking-backend
+  profiles:
+    include: secret
+  jpa:
+    properties:
+      hibernate:
+        default_batch_fetch_size: 100
